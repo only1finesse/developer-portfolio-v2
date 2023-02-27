@@ -25,21 +25,26 @@ const Projects = () => {
                     title="StockHome Ecommerce App"
                     des="An active ReactJS Inventory App that stores real time data for customers and store owners as well as helps with inventory management"
                     src={StockhomeApp}
+                    githubLink={'https://github.com/team-fire-project/online-app'}
                 />
                 <ProjectsCard
                     title="TicTacToe"
                     des="If you think you're a pro at this game, check this out and have a match with the TicTacToe AI. ;)"
                     src={TicTacToe}
+                    githubLink={'https://github.com/only1finesse/tic-tac-toe-game'}
+                    projectLink={'https://only1finesse.github.io/tic-tac-toe-game'}
                 />
                 <ProjectsCard
                     title="Robofriends"
                     des="Create new Robot avatars for you and your friends. Robo arts are gotten from a Robo avatar API"
                     src={Robofriends}
+                    githubLink={'https://github.com/only1finesse/robofriends'}
                 />
                 <ProjectsCard
                     title="Personal Blog"
                     des="Tried my hands on WordPress and decided to create a personal blog."
                     src={PersonalBlog}
+                    projectLink={'https://whoisstanley.wordpress.com/'}
                 />
             </div>
         </section>
