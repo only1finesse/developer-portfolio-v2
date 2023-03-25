@@ -3,21 +3,20 @@ import { Link } from 'react-scroll'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { navLinksdata } from '../../constants'
+import { my_resume } from '../../assets'
 
 const NavBar = () => {
-    const downloadResume = () => {
-        // using Java Script method to get PDF file
-        fetch('StanleyOmotuyole-Resume.pdf').then(response => {
-            response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'StanleyOmotuyole-Resume.pdf';
-                alink.click();
-            })
-        })
+    const downloadResume = (blob, fileName) => {
+        const link = document.createElement('a');
+        // create a blobURI pointing to our Blob
+        link.href = URL.createObjectURL(blob);
+        link.download = fileName;
+        // some browser needs the anchor to be in the doc
+        document.body.append(link);
+        link.click();
+        link.remove();
+        // in case the Blob uses a lot of memory
+        setTimeout(() => URL.revokeObjectURL(link.href), 7000);
     }
 
     return (
@@ -49,11 +48,15 @@ const NavBar = () => {
                 <ul className='flex items-center'>
                     <li><BsFillMoonStarsFill /></li>
                     <li className='bg-gradient-to-r from-designColor to-purple-500 text-offWhite p-2 rounded-md  ml-8 hover:bg-gradient-to-r hover:from-red-700 hover:to-purple-700 duration-300 transition-all'>
-                        <button className='flex flex-row gap-2 justify-between items-center font-medium' onClick={downloadResume}>
-                            <HiDownload />
-                            <p className='font-medium pr-2'>Resume</p>
-                            {/* <a className='font-medium ' href="google.com"> Resume</a> */}
-                        </button>
+                        <a
+                            href={my_resume} download="stan-omotuyole-resume" target='_blank'
+                            rel="noreferrer"
+                        >
+                            <button className='flex flex-row gap-2 justify-between items-center font-medium' onClick={() => downloadResume(new Blob(['resume']), 'stan-omotuyole-resume.pdf')}>
+                                <HiDownload />
+                                <p className='font-medium pr-2'>Resume</p>
+                            </button>
+                        </a>
                     </li>
                 </ul>
             </div>

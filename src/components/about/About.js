@@ -22,7 +22,7 @@ const About = () => {
                             I'm someone who is always eager to learn by doing, and thus, gain new experiences. When I'm not writing code, I'm either making music, playing a video game or playing soccer!
                         </p>
                         <p>
-                            So whether it's a project, job opportunity, a quick <span className='font-semibold'>COD Deathmatch</span> or a chat over some of Seattle's finest Bobba tea, don't hesitate to <Link
+                            So whether it's a project, job opportunity, a quick <span className='font-semibold'>COD Deathmatch</span> or a chat over some of Seattle's finest Boba tea, don't hesitate to <Link
                                 className='text-blue-400 hover:text-blue-600 underline' href='/home'
                                 activeClass="active"
                                 to={'home'}
