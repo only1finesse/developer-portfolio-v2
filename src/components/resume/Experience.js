@@ -13,19 +13,17 @@ const Experience = () => {
             <div>
                 <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
                     <p className="text-sm text-designColor tracking-[4px]">2010 - Present</p>
-                    <h2 className="text-3xl md:text-4xl font-bold">Education Quality</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
                 </div>
                 <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
                     <ResumeCard
                         title="BSc - Medical Laboratory Science"
-                        subTitle="Imo State University, Nigeria (2014 - 2020)"
-                        result="3.5/5"
+                        subTitle="Imo State University, Nigeria (2014 - 2021)"
                         des="Specialized in Histopathology and Phlebotomy. Learned necessary skills needed to function in the Laboratory sector of the health industry"
                     />
                     <ResumeCard
                         title="Certificate in Software Development"
                         subTitle="YEAR UP / Seattle Central College (2020 - 2021)"
-                        result="4/4"
                         des="Certificate provided in order to prepare aspiring Software Engineers to work in various sectors of the IT Industry."
                     />
                     <ResumeCard
